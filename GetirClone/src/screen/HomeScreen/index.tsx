@@ -1,21 +1,18 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
-import styles from "./styles";
-import Entypo from "@expo/vector-icons/Entypo";
-
+import { ScrollView } from "react-native";
+import HeaderMain from "../../components/HeaderMain";
+import BannerCarousel from "../../components/BannerCarousel";
+import MainCategories from "../../components/MainCategories";
 function index() {
   return (
-    <View style={styles.headerMain}>
-      <View>
-        <Image />
-        <View>
-          <Text></Text>
-          <Text></Text>
-          <Entypo name="chevron-right" size={24} color="#5D3EBD" />
-        </View>
-      </View>
-      <View></View>
-    </View>
+    <ScrollView
+      stickyHeaderIndices={[0]}
+      style={{ backgroundColor: "#f5f5f5" }}
+    >
+      <HeaderMain />
+      <BannerCarousel />
+      <MainCategories />
+    </ScrollView>
   );
 }
 
